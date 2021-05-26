@@ -4,5 +4,6 @@ from . import views
 app_name = 'generator'
 
 urlpatterns = [
-    path('', views.home),
+    path('', views.home, name='home'),
+    path('result', views.result, name='result'),
 ]
