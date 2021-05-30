@@ -1,6 +1,6 @@
 <h1>Password Generator</h1>
 <form action="{% url 'generator:result' %}" method="POST">
-    <select>
+    <select name='length' required>
         <option value="" disabled selected>Choose length</option>
         <option value="6">6 characters</option>
         <option value="7">7 characters</option>
@@ -10,14 +10,15 @@
     </select>
 
     <label for="numbers">Include numbers</label>
-    <input type="checkbox" id='numbers'>
+    <input type="checkbox" id='numbers' name='numbers'>
 
     <label for="upper">Include uppercase</label>
-    <input type="checkbox" id='upper'>
+    <input type="checkbox" id='upper' name="upper">
 
     <label for="numbers">Include sepecial characters</label>
-    <input type="checkbox" id='special'>
+    <input type="checkbox" id='special' name="special">
 
     {% csrf_token %}
     <button type="submit">Generate</button>
 </form>
+<a href="{% url 'generator:about' %}">About page</a>
