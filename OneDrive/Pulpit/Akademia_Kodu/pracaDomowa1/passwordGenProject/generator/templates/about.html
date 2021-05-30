@@ -1,3 +1,16 @@
-<p>Created by Mateusz Jasiński</p>
+{% extends 'base.html' %}
+{% block content %}
 
-<a href="{% url 'generator:home' %}">Home</a>
+<div class="container text-center">
+
+    <br>
+
+    <div class="alert alert-success" role="alert">
+        Created by Mateusz Jasiński
+    </div>
+
+    <a href="{% url 'generator:home' %}" class="btn btn-outline-secondary">Home</a>
+
+</div>
+
+{% endblock content %}
